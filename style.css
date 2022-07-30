@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;600;700&display=swap");
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --Light-Cyan: hsl(179, 47%, 52%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* h2,
+* p {
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  background-color: var(--Light-Gray);
+}
+
+main {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  max-width: 40rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 14rem 14rem;
+  margin: 2rem;
+}
+
+.intro,
+.subscription,
+.sponsor {
+  padding: 1.5rem 1.4rem;
+}
+
+.intro h1,
+.subscription h2,
+.sponsor h2 {
+  margin: 0 auto 1.5rem 0;
+  font-size: 1.2rem;
+}
+
+.intro {
+  background-color: white;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.intro h1 {
+  color: var(--Cyan);
+}
+
+.intro p:nth-of-type(1) {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+}
+
+.intro p:nth-of-type(2) {
+  color: var(--Grayish-Blue);
+  line-height: 1.7rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.subscription {
+  background-color: var(--Cyan);
+}
+
+.subscription h2 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.subscription p:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 0 0.2rem 0;
+}
+
+.subscription button {
+  cursor: pointer;
+  width: 100%;
+  height: 3rem;
+  border-style: none;
+  border-radius: 0.3rem;
+  background-color: var(--Bright-Yellow);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  transition: 150ms ease-out background-color;
+  box-shadow: 0px 0px 2rem 0.1rem hsl(180, 42%, 33%);
+}
+
+.subscription button:hover {
+  background-color: hsl(71, 72%, 44%);
+}
+
+.cost {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.per_month {
+  color: var(--Light-Gray);
+  margin-left: 1rem;
+  font-weight: 200;
+}
+
+.subscription p:nth-of-type(2) {
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+}
+
+.sponsor {
+  background-color: var(--Light-Cyan);
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.sponsor h2 {
+  margin-bottom: 1.2rem;
+}
+
+.sponsor ul {
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+}
+
+.attribution {
+  color: black;
+  text-align: center;
+  min-height: 5vh;
+}
+
+.attribution a {
+  color: var(--Cyan);
+  transition: 150ms ease-out color;
+}
+
+.attribution a:hover {
+  color: black;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 14rem auto;
+  }
+
+  .subscription,
+  .sponsor {
+    padding: 2rem;
+  }
+
+  .grid .intro {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 2.5rem;
+  }
+
+  .intro h1 {
+    font-size: 1.7rem;
+  }
+
+  .intro p:nth-of-type(1) {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro p:nth-of-type(2) {
+    font-size: 1rem;
+  }
+
+  .subscription {
+    border-bottom-left-radius: 0.3rem;
+  }
+
+  .sponsor {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.3rem;
+  }
+}
