@@ -50,6 +50,7 @@ Users should be able to:
 ### What I learned
 
 - CSS Grid basics
+- To build a more responsive layout
 
 ### Useful resources
 
